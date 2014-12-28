@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+  <script src="js/jquery.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/qiandao.js"></script>
+  <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+    <style type="text/css">
+        .login_success{display:none;}
+        .h1_content{margin: 0 auto;}
+        .user_info{width: 100%;}
+        .auto_lo{width: 100%; }
+        #lab_auto{font-size: 16px;
+            font-weight: bold;
+            height: 32px;
+            line-height: 20.7999992370605px;
+            margin-bottom: 8px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 8px;
+        }
+
+    </style>
+</head>
+<body>
+<!--主页-->
+  <div data-role="page" data-theme="e" id="pageone">
+
+    <div data-role="panel" id="panel" data-position="right"  data-display="push">
+
+        <div data-role="content" role="main">
+            <a href="#" data-role="button" data-icon="flat-man" data-iconpos="notext" data-inline="true">Man</a>
+
+            <div class="login_from">
+                <h3>用户登录</h3>
+                <input type="text" placeholder="用户名" id="username" />
+                <input type="text" placeholder="密码" id="password" />
+
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"> <label for="auto_login" class="ui-block-b " id="lab_auto">自动登录：</label></div>
+                    <div class="ui-block-b">
+                        <select name="switch" class="ui-block-b" id="auto_login" data-role="slider" >
+                        <option value="on">On</option>
+                        <option value="off">Off</option>
+                    </select></div>
+                    <div class="ui-block-b"> <div class="ui-block-a login_b"><button id="login_sub" data-icon="flat-man">登录</button></div></div>
+
+
+                </div>
+
+            </div>
+
+            <div class="login_success ui-grid-a">
+                <div class="user_info"><h3>欢迎：</h3><span></span></div>
+                <div class="ui-block-b"><button id="login_out" data-icon="flat-man">注销</button></div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <div data-role="header"  data-position="fixed" >
+      <a data-iconpos="notext" data-role="button" data-icon="home" title="Home" >Home</a>
+      <h1>考勤系统</h1>
+      <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu" ></a>
+    </div>
+
+    <div data-role="content" role="main">
+
+      <img src="image/top.png" width="100%"/>
+
+      <div class="ui-block"><a href="#qd_page" data-transition="flow"><button data-icon="flat-heart" >签到</button></a></div>
+      <div class="ui-block"><a href="#qt_page" data-transition="flow"><button data-icon="flat-cross" >签退</button></a></div>
+      <div class="ui-block"><a href="#emailpage" data-transition="flow"><button data-icon="flat-mail">消息</button></a></div>
+       <div class="ui-block"><a href="#qj_page" data-transition="flow"><button data-icon="flat-time">请假</button></a></div>
+        <div class="ui-block"><a href="#txpage" data-transition="flow"><button data-icon="flat-man">通讯录</button></a></div>
+
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#"  data-icon="grid"  class="ui-btn-active">主页</a></li>
+                <li><a href="#pagetwo"  data-transition="flow" data-icon="flat-calendar">日程</a></li>
+                <li><a href="#pagethree" data-transition="flow" data-icon="gear">设置</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+<!--日程-->
+<div data-role="page" id="pagetwo" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>日程</h1>
+
+    </div>
+
+    <div data-role="content">
+    </div>
+</div>
+
+<!--设置-->
+<div data-role="page" id="pagethree" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>设置</h1>
+    </div>
+
+    <div data-role="content">
+        <form method="post" action="demoform.asp">
+        <div data-role="fieldcontain">
+            <label for="switch">切换开关：</label>
+            <select name="switch" id="switch" data-role="slider">
+                <option value="on">On</option>
+                <option value="off">Off</option>
+            </select>
+        </div>
+        <input type="submit" data-inline="true" value="提交">
+        </form>
+
+
+
+    </div>
+</div>
+<!--签到-->
+<div data-role="page" id="qd_page" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>签到</h1>
+    </div>
+
+    <div data-role="content">
+        <label for="info3">备注:</label>
+        <textarea name="addinfo" id="info3" style="height: 200px;" ></textarea>
+
+        <div class="ui-block"><button data-icon="flat-heart" id="qd_sub" >签到</button></div>
+
+    </div>
+</div>
+<!--签退-->
+<div data-role="page" id="qt_page" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>签退</h1>
+    </div>
+
+    <div data-role="content">
+        <label for="info2">备注:</label>
+        <textarea name="addinfo" id="info2" ></textarea>
+
+        <div class="ui-block"><button data-icon="flat-heart"  id="qt_sub">签退</button></div>
+
+    </div>
+</div>
+<!--请假-->
+<div data-role="page" id="qj_page" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>请假</h1>
+    </div>
+
+    <div data-role="content">
+        <form method="post" action="demoform.asp">
+            <label for="fname2">姓名：</label>
+            <input type="text" name="fname" id="fname2">
+            <label for="fname4">时间：</label>
+            <input type="text" name="fname" id="fname4">
+            <label for="info">原因:</label>
+            <textarea name="addinfo" id="info" ></textarea>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+    </div>
+</div>
+
+<!--email-->
+<div data-role="page" id="emailpage" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>消息</h1>
+    </div>
+
+    <div data-role="content"  >
+        <h2>我的邮箱</h2>
+        <ul data-role="listview" data-inset="true" data-theme="c">
+            <li data-theme="a"><a href="#" >收件箱<span class="ui-li-count" style="background: #fff; border-color: #ffffff;" data-theme="b">25</span></a></li>
+            <li data-theme="b"><a href="#">发件箱<span class="ui-li-count" style="background: #fff; border-color: #ffffff;" data-theme="a">432</span></a></li>
+            <li data-theme="c"><a href="#">垃圾箱<span class="ui-li-count" style="background: #fff; border-color: #ffffff;" data-theme="c">7</span></a></li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!--email-->
+<div data-role="page" id="txpage" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>通讯录</h1>
+    </div>
+
+    <div data-role="content"  >
+        <h2>我的通讯录</h2>
+        <ul data-role="listview" data-autodividers="true" data-inset="true">
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Adele</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Agnes</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Albert</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Billy</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Bob</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Calvin</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Cameron</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Chloe</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Christina</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Diana</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Gabriel</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Glen</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Ralph</a></li>
+            <li><a href="#"style="background-color: #ffffff;color: #000000;">Valarie</a></li>
+        </ul>
+
+    </div>
+</div>
+<div data-role="page" id="do" data-theme="e" >
+    <div data-role="header"  data-position="fixed" >
+        <a data-iconpos="notext"  href="#pageone" data-role="button" data-icon="back" title="back" ></a>
+        <h1>通讯录</h1>
+    </div>
+
+    <div data-role="content"  >
+        <h2>我的通讯录</h2>
+        <ul data-role="listview" data-autodividers="true" data-inset="true">
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Adele</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Agnes</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Albert</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Billy</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Bob</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Calvin</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Cameron</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Chloe</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Christina</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Diana</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Gabriel</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Glen</a></li>
+            <li><a href="#" style="background-color: #ffffff;color: #000000;">Ralph</a></li>
+            <li><a href="#"style="background-color: #ffffff;color: #000000;">Valarie</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<div data-role="dialog" id="aboutPage" data-theme="e">
+    <div data-role="header" >
+        <h1>提示</h1>
+    </div>
+    <div data-role="content" >
+        <h2 class="h1_content"></h2>
+         <a href="#" data-role="button" data-rel="back">关闭</a>
+    </div>
+</div>
+
+
+</body>
+</html>

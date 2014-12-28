@@ -1,0 +1,124 @@
+<html class="ui-mobile"><head><base href="http://www.w3school.com.cn/jquerymobile/tjm_index.html">
+    <link href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <title>jQuery Mobile 演示</title></head>
+<body class="ui-mobile-viewport ui-overlay-c">
+
+<div id="pageone" data-role="page" data-url="pageone" tabindex="0" class="ui-page ui-body-c ui-page-footer-fixed ui-page-active" style="padding-bottom: 44px; min-height: 426px;">
+    <div data-theme="a" data-role="header" class="ui-header ui-bar-a" role="banner">
+        <h1 class="ui-title" role="heading" aria-level="1">jQuery Mobile 演示</h1>
+    </div>
+
+    <nav data-role="navbar" class="ui-navbar ui-mini" role="navigation">
+        <ul class="ui-grid-c">
+            <li class="ui-block-a"><a data-icon="home" data-rel="dialog" href="#home" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-theme="c" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">首页</span><span class="ui-icon ui-icon-home ui-icon-shadow">&nbsp;</span></span></a></li>
+            <li class="ui-block-b"><a data-icon="grid" data-rel="dialog" href="#email" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-theme="c" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">邮件</span><span class="ui-icon ui-icon-grid ui-icon-shadow">&nbsp;</span></span></a></li>
+            <li class="ui-block-c"><a data-icon="search" data-rel="dialog" href="#phonebook" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-theme="c" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">通讯录</span><span class="ui-icon ui-icon-search ui-icon-shadow">&nbsp;</span></span></a></li>
+            <li class="ui-block-d"><a data-icon="star" data-rel="dialog" href="#calendar" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-iconpos="top" data-theme="c" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">日历</span><span class="ui-icon ui-icon-star ui-icon-shadow">&nbsp;</span></span></a></li>
+        </ul>
+    </nav>
+
+    <div data-role="content" class="ui-content" role="main">
+        <p style="text-align:center;color:grey;">请点击上面的按钮来测试 jQuery Mobile。</p>
+    </div>
+
+    <div data-theme="a" data-position="fixed" data-role="footer" class="ui-footer ui-bar-a ui-footer-fixed slideup ui-fixed-hidden" role="contentinfo">
+        <h1 class="ui-title" role="heading" aria-level="1">Copyright W3School</h1>
+    </div>
+</div>
+
+<div id="email" data-role="dialog" data-url="email" tabindex="0" class="ui-page ui-body-c ui-dialog ui-overlay-a ui-page-footer-fixed" style="padding-bottom: 44px; min-height: 426px;"><div role="dialog" class="ui-dialog-contain ui-corner-all ui-overlay-shadow">
+    <div data-role="header" class="ui-corner-top ui-header ui-bar-a" role="banner"><a data-iconpos="notext" data-icon="delete" href="#" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" title="Close" data-transition="none" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>
+        <h1 class="ui-title" role="heading" aria-level="1">邮件数量</h1>
+    </div>
+
+    <div data-role="content" class="ui-content ui-body-c" role="main">
+        <ul data-inset="true" data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-corner-top ui-btn-up-c"><div class="ui-btn-inner ui-li ui-corner-top"><div class="ui-btn-text"><a href="#" class="ui-link-inherit" data-transition="pop" data-direction="reverse">收件箱<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">25</span></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit" data-transition="pop" data-direction="reverse">发件箱<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">432</span></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-corner-bottom ui-li-last ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit" data-transition="pop" data-direction="reverse">垃圾箱<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">7</span></a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+        </ul>
+        <a data-icon="back" data-inline="true" data-role="button" href="#pageone" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left ui-btn-up-c" data-transition="pop" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">返回</span><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></span></a>
+    </div>
+
+    <div data-position="fixed" data-role="footer" class="ui-corner-bottom ui-footer ui-bar-a ui-footer-fixed slideup" role="contentinfo">
+        <h1 class="ui-title" role="heading" aria-level="1">页脚文本</h1>
+    </div>
+</div></div>
+
+<div id="home" data-role="dialog" data-url="home" tabindex="0" class="ui-page ui-body-c ui-dialog ui-overlay-a" style="min-height: 470px;"><div role="dialog" class="ui-dialog-contain ui-corner-all ui-overlay-shadow">
+    <div data-role="header" class="ui-corner-top ui-header ui-bar-a" role="banner"><a data-iconpos="notext" data-icon="delete" href="#" class="ui-btn-left ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all ui-btn-icon-notext" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" title="Close"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>
+        <h1 class="ui-title" role="heading" aria-level="1">首页</h1>
+    </div>
+
+    <div data-role="content" class="ui-content ui-body-c" role="main">
+        <p>这里是首页。</p>
+        <a data-icon="back" data-inline="true" data-role="button" href="#pageone" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left ui-btn-up-c" data-transition="pop" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">返回</span><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></span></a>
+    </div>
+
+    <div data-role="footer" class="ui-corner-bottom ui-footer ui-bar-a" role="contentinfo">
+        <h1 class="ui-title" role="heading" aria-level="1">页脚文本</h1>
+    </div>
+</div></div>
+
+<div id="home2" data-role="page" data-url="home2">
+    <div data-role="header">
+        <h1>首页</h1>
+    </div>
+
+    <div data-role="content">
+        <p>Home Is Where The Heart Is!</p>
+        <a data-icon="back" data-inline="true" data-role="button" href="#pageone">返回</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+
+
+<div id="calendar" data-role="dialog" data-url="calendar" tabindex="0" class="ui-page ui-body-c ui-dialog ui-overlay-a" style="min-height: 470px;"><div role="dialog" class="ui-dialog-contain ui-corner-all ui-overlay-shadow">
+    <div data-role="header" class="ui-corner-top ui-header ui-bar-a" role="banner"><a data-iconpos="notext" data-icon="delete" href="#" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" title="Close" data-transition="none" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>
+        <h1 class="ui-title" role="heading" aria-level="1">日历</h1>
+    </div>
+
+    <div data-role="content" class="ui-corner-bottom ui-content ui-body-c" role="main">
+        <ul data-inset="true" data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+            <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b ui-li-has-count ui-corner-top">周三, 10 月 7 日, 2013 年 <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2</span></li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit" data-transition="pop" data-direction="reverse"><p class="ui-li-aside ui-li-desc">三楼会议室</p>
+                <h2 class="ui-li-heading">会议</h2>
+                <p class="ui-li-desc">在 10:00 提醒</p>
+            </a>
+            </div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+            <li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-bottom ui-li-last ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit" data-transition="pop" data-direction="reverse"><p class="ui-li-aside ui-li-desc">小南国餐厅</p>
+                <h2 class="ui-li-heading">约会</h2>
+                <p class="ui-li-desc">在 18:00 提醒</p>
+            </a>
+            </div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+        </ul>
+        <a data-icon="back" data-inline="true" data-role="button" href="#pageone" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">返回</span><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></span></a>
+    </div>
+
+</div>
+
+</div>
+
+<div id="phonebook" data-role="dialog" data-url="phonebook" tabindex="0" class="ui-page ui-body-c ui-dialog ui-overlay-a" style="min-height: 470px;"><div role="dialog" class="ui-dialog-contain ui-corner-all ui-overlay-shadow">
+    <div data-role="header" class="ui-corner-top ui-header ui-bar-a" role="banner"><a data-iconpos="notext" data-icon="delete" href="#" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" title="Close" data-transition="none" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Close</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a>
+        <h1 class="ui-title" role="heading" aria-level="1">通讯录</h1>
+        <a data-icon="back" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-role="button" href="#pageone" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-transition="pop" data-direction="reverse"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">返回</span><span class="ui-icon ui-icon-back ui-icon-shadow">&nbsp;</span></span></a>
+    </div>
+
+    <div data-role="content" class="ui-corner-bottom ui-content ui-body-c" role="main">
+
+        <form class="ui-listview-filter ui-bar-c ui-listview-filter-inset" role="search"><div class="ui-input-search ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-icon-searchfield ui-body-c"><input placeholder="Filter items..." data-type="search" class="ui-input-text ui-body-c"><a title="clear text" class="ui-input-clear ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-fullsize ui-btn-icon-notext ui-input-clear-hidden" href="#" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="delete" data-iconpos="notext" data-theme="c" data-mini="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">clear text</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a></div></form><ul data-filter="true" data-inset="true" data-autodividers="true" data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b ui-corner-top">B</li><li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit" data-transition="pop" data-direction="reverse">Bill Gates</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+        <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">G</li><li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">George Bush</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+        <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">T</li><li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-corner-bottom ui-li-last ui-btn-up-c"><div class="ui-btn-inner ui-li"><div class="ui-btn-text"><a href="#" class="ui-link-inherit">Thomas Carter</a></div><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></div></li>
+    </ul>
+    </div>
+</div></div>
+
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span><h1>loading</h1></div></body></html>
